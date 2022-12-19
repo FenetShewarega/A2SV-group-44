@@ -1,0 +1,11 @@
+class Solution:
+    def transpose(self, X: List[List[int]]) -> List[List[int]]:
+     
+         n = len(X)
+         m = len(X[0])
+         arr = [[0]*n for i in range(m)]
+        
+         for i in range(m):
+            for j in range(n):
+                arr[i][j] = X[j][i]
+         return arr
