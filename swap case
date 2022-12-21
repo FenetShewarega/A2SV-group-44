@@ -1,0 +1,14 @@
+def swap_case(s):
+    st=[]
+    for i in s:
+        if i.isupper():
+            st.append(i.lower())
+        elif i.islower():
+            st.append(i.upper())
+        else:
+            st.append(i)       
+    return ''.join(st)
+    s = list(s)
+    x = [x.lower() if x.isupper() else x.upper() for x in s]
+    s = "".join(x)
+    return s
