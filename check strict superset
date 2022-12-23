@@ -1,0 +1,14 @@
+setA = set(list(map(int,input().split())))
+n = int(input())
+flag= True
+for _ in range(n):
+    setB = set(list(map(int,input().split())))
+    for ele in setB:
+        
+        if ele not in setA or len(setA) == len(setB):
+            flag = False
+            break
+print(flag)    
+
+        
+
