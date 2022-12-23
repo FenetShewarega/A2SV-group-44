@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import  defaultdict
+
+n = int(input())
+count = 0
+list_ = defaultdict(int)
+
+for _ in range(n):
+    words = ((input().strip()))
+    list_[words] += 1
+
+print(len(list_))
+print(' '.join(map(str, list_.values())))     
+    
+    
+    
