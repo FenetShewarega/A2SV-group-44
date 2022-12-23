@@ -1,0 +1,29 @@
+if __name__ == '__main__':
+    N = int(input())
+    
+list_ = []   
+for _ in range(N):
+    task = list(input().split())
+    
+    if task[0] == "insert":
+        list_.insert(int(task[1]),int(task[2]))
+    
+    elif task[0] == "print":
+        print(list_)
+        
+    elif task[0] ==  "remove":
+        list_.remove(int(task[1]))
+        
+    elif task[0] == "append":
+        list_.append(int(task[1]))
+        
+    elif task[0] == "sort":
+        list_.sort()
+        
+    elif task[0] == "pop":
+        list_.pop()
+        
+    elif task[0] == "reverse":
+        list_.reverse()
+                           
+    
