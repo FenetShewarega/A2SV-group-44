@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+eng = list(map(int,input().split()))
+m = int(input())
+fren = list(map(int,input().split()))
+count=0
+
+for i in eng:
+    if i not in fren:
+        count+=1
+print(count)        
