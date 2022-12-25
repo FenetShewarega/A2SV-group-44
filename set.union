@@ -1,0 +1,8 @@
+n = int(input())
+eng = list(map(int,input().split()))
+m = int(input())
+fren = list(map(int,input().split()))
+count=0
+
+union = eng + fren
+print(len(set(union)))
