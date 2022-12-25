@@ -1,0 +1,10 @@
+from collections import defaultdict
+
+n = int(input())
+l = list(input().split())
+counter = defaultdict(int)
+for _ in l:
+    counter[_] += 1 
+for elem in counter:
+    if counter[elem] == 1:
+        print(elem)
