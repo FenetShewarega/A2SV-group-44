@@ -1,0 +1,11 @@
+input_ = list(input().split())
+set_=set()
+ 
+for _ in input_:
+   set_.add(_)
+ 
+if len(set_) >= 5:
+   print("YES")
+else:
+   print("NO")
+   
