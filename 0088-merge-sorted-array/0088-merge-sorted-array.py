@@ -4,8 +4,7 @@ class Solution:
             left=n-1
             right=m-1
             flag = m+n -1
-           
-                
+            
             while  left >= 0    :
                 
                 if  right>=0  and nums1[right] > nums2[left] :
