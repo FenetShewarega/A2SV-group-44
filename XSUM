@@ -1,0 +1,32 @@
+from collections import defaultdict
+ 
+n = int(input())
+for i in range(n):
+      row_col= list(map(int , input().split()))
+      row = row_col[0]
+      col = row_col[1]
+      diag1 = defaultdict(int)
+      diag2 = defaultdict(int)
+      mat = []
+      li=[]
+      lii = []
+      for i in range(row):
+            mat.append(list(map(int, input().split())))
+            
+      for i in range(len(mat)):
+            for j in range(len(mat[0])):
+                   x= i - j
+                   y = i + j
+                   if x not in diag1:
+                         diag1[x] += 1
+                   if y not in diag2:
+                         diag2[y] += 1
+                   diag1[i-j]+= mat[i][j]
+                   diag2[i+j]+= mat[i][j]
+                   
+      max_=0             
+      for i in range(len(mat)):
+            for j in range(len(mat[0])):
+                 x=diag1[i-j] - 1 + diag2[i + j] - 1 - mat[i][j]
+                 max_=max( max_ , x)
+      print(max_)
