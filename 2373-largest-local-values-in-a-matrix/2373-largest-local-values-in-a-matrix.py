@@ -10,7 +10,7 @@ class Solution:
         
         for i in range(len(maxlocal)):
             for j in range(len(maxlocal)):
-                val = -inf
+                val = 0
                 for dx, dy in directions:
                     val = max(val, grid[i + dx][j + dy])
                 maxlocal[i][j] = val
