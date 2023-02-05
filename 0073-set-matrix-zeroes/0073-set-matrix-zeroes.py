@@ -1,26 +1,7 @@
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        
-#         for i in range(len(matrix)):
-            
-#             for j in range(len(matrix[0])):
-                
-#                 j0 = j
-#                 jc = j
-#                 ic = i
-#                 i0 = j
-                
-#                 if matrix[i0][j0] == 0:
-#                     j0 = 0
-#                     while j0 < len(matrix[0]):
-#                         matrix[i0][j0] = 0
-#                         j0 += 1
-                    
-#                     while ic < len(matrix):
-#                         matrix[ic][jc] = 0
-#                         ic += 1
-                    
-#         return(matrix)  
+
+ 
         r=len(matrix)              
         c=len(matrix[0])
         row=[0]*r
