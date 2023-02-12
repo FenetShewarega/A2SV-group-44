@@ -1,0 +1,27 @@
+n , m =list(map(int,input().split()))
+list1 = list(map(int, input().split()))
+list2 = list(map(int,  input().split()))
+sort = []
+
+
+left= 0
+right= 0
+# flag = m+n -1
+
+while  left < n    :
+    
+    if  right < m   and list2[right] < list1[left] :
+        sort.append(list2[right])
+        right+=1
+    else:
+        sort.append( list1[left])
+        left+=1
+while right < m :
+    sort.append(list2[right])
+    right += 1
+while left < n:
+    sort.append(list1[left])
+    left+= 1
+    
+    
+print(*sort)    
