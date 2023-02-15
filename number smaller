@@ -1,0 +1,24 @@
+n , m = list(map(int ,input().split()))
+fr = list(map(int , input().split()))
+sd = list(map(int , input().split()))
+count = 0
+up = n - 1
+lw = m - 1
+res = []
+while lw >= 0 and up >= 0:
+    count = 0
+    if sd[lw] > fr[up] :
+        count += up + 1
+        res.append(count)
+        lw -= 1
+    else:
+   
+        if up == 0 :
+            res.append(0)
+            lw-=1
+        else:
+            up-=1
+res.reverse()          
+print(*res)
+
+    
