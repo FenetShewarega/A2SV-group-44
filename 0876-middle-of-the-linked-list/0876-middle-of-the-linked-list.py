@@ -6,14 +6,13 @@
 class Solution(object):
     def middleNode(self, head):
         
-        curr = head
-        size = 0
-        while curr:
-            size+=1
-            curr = curr.next
-   
-        curr = head
-        for i in range(size//2):
-            curr = curr.next
-        return (curr)
+        slow = head
+        fast = head
+        while fast != None and fast.next  != None:
+            slow = slow.next
+            fast = fast.next.next
+        return(slow)    
+            
+        
+            
             
