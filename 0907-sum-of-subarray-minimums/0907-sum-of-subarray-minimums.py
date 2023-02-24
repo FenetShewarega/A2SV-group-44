@@ -6,7 +6,7 @@ class Solution:
         # prev_val = 0
         total = 0
         for i in range(len(arr)):
-            while  stack and arr[stack[-1]] > arr[i]:
+            while  stack and arr[stack[-1]] >= arr[i]:
                 val = stack.pop()
 
                 if len(stack) == 0:
