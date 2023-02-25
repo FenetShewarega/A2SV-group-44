@@ -7,8 +7,7 @@ class Solution:
         p_counter = defaultdict(int)
         s_counter = defaultdict(int)
         count = []
-        
-        
+       
         for i in p :
             p_counter[i]+=1
         right = 0 
@@ -38,23 +37,7 @@ class Solution:
             
             
             
-         
-        
-#         n = len(s)
-#         k = len(p) 
-#         p = list(map(str , p))
-#         p.sort()
-#         count = []
-#         for i in range(n -k + 1 ):
-#             string = []
-#             for j in range(i , i+k):
-#                 string.append(s[j])
-#             string.sort()
-            
-#             if string == p:
-    
-#                 count.append(i)
-#         return count              
+                      
           
     
      
