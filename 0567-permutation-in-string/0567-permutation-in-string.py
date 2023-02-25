@@ -12,10 +12,14 @@ class Solution:
         for i in s1:
             count_s1[i] += 1
         count_s2 = defaultdict(int) 
+        
+        
+        
         for right in range(S) :
             count_s2 [s2[right]] += 1
             if count_s2 == count_s1:
                 return True
+            
         left = 0     
         for right in range(S, n):
             
