@@ -2,22 +2,26 @@ class Solution:
     def nextGreaterElements(self, nums: List[int]) -> List[int]:
         
         stack  = []
-      
-        num = nums + nums
-        for i in range(len(nums) ):
-            inc = 0
-            for j in range(i,len(num)):
-                if nums[i] < num[j]:
-                    inc+=1
-                    stack.append(num[j])
-                    break
-            if inc == 0:
-                stack.append(-1)
-        return stack
+        res = [-1 for i in range(len(nums))]
+        n = len(nums)
+        for i in range(n ):
             
-        
-        
-       
+            while stack and nums[stack[-1]] < nums[i]:
+                
+                x =stack.pop()
+                res[x] = nums[i]
+                
+            stack.append(i)
+            
+        for i in range(n):  
+            
+            if stack:
+                while stack and nums[stack[-1]] < nums[i]:
+                    x = stack.pop()
+                    res[x] = nums[i]
+          
+        return res
+                
             
             
             
