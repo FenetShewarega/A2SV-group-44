@@ -1,7 +1,14 @@
 class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        j= len(s) - 1
-        for i in range(len(s)//2):
-            s[i],s[j] = s[j],s[i]
-            j-=1
+    def reverseString(self, s: List[str] ) -> None:
        
+        return self.helper(0,len(s) - 1,s)
+        
+    def helper(self,left , right , s):
+        
+      
+        if left >= right:
+            return s 
+        else:
+            s[left] , s[right] = s[right] ,s[left]
+            self.helper( left + 1, right - 1 ,s)
+        
