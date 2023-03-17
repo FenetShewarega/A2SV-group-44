@@ -7,7 +7,7 @@
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         result1 = self.traverseRoot1(root1 , [])
-        result2 = self.traverseRoot2(root2, [])
+        result2 = self.traverseRoot1(root2, [])
         if result1 == result2:
             return True
         else:
@@ -25,14 +25,6 @@ class Solution:
             self.traverseRoot1(root.left , path1)
             self.traverseRoot1(root.right , path1)
         return path1
-    def traverseRoot2(self,root , path2):
-        if not root :
-            return []
-        if  not root.left and not root.right:
-            path2.append(root.val)
-        else:
-            self.traverseRoot2(root.left , path2)
-            self.traverseRoot2(root.right , path2)
-        return path2
+ 
         
         
