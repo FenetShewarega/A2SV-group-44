@@ -15,9 +15,14 @@ class Solution:
         return self.checker(left_nums , right_nums)
         
     def checker(self,arr1,arr2):
-        for j in range(len(arr2)):
-            self.count += len(arr1) - bisect.bisect(arr1,2 * arr2[j])
+        # for j in range(len(arr2)):
+        #     self.count += len(arr1) - bisect.bisect(arr1,2 * arr2[j])
+        right = len(arr2)-1
+        for left in range(len(arr1)-1, -1,-1):
+            while right >= 0 and arr2[right] * 2 >= arr1[left]:
+                right -= 1
             
+            self.count += right + 1
         left = 0
         right =0 
         res = []
