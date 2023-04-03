@@ -1,17 +1,24 @@
-class Solution(object):
-    def numRescueBoats(self, people, limit):
-        # bo=[3,1,2,2]
+class Solution:
+    def numRescueBoats(self, p: List[int], limit: int) -> int:
         
-        people.sort()
-        i =  0
-        ans = 0
         
-        for j in range(len(people)-1,-1,-1):
-            if i <= j:
-                ans += 1
-                if   people[i] + people[j] <= limit:
-                    i += 1
+        p.sort()
+        i, j = 0, len(p) - 1
+        count = 0
+        
+        while i <= j:
+            if p[i] + p[j] <= limit:
+                i += 1
                 j -= 1
-        return ans
-        
-        
+                count += 1
+            else:
+                j -= 1
+                count += 1
+                
+        return count
+            
+                    
+              
+                
+                
+            
