@@ -1,15 +1,17 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        
-        n = len(coins)
-        dp = [amount + 1] * (amount+1)
-        
-        dp[0] = 0
-
-        for i in range(1, amount+1):
-            for c in coins:
-                if i - c >= 0:
-                    dp[i] = min(dp[i] , dp[i- c] + 1)
-        return dp[amount] if dp[amount] != amount + 1 else -1
-    
-                
+        @cache
+        def recur(curr_amount):
+            doro = inf
+            if curr_amount == 0:
+                return 0
+            if curr_amount > 0:
+               
+                for c in coins:
+                    doro = min(doro , recur(curr_amount - c) + 1)
+            return doro 
+        val =  recur(amount)          
+        if val == inf:
+            return -1
+        else:
+            return val
