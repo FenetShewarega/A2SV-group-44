@@ -23,7 +23,6 @@ class Solution:
         
     def dfs(self , n, visited):
         visited.add(n)
-        # print((self.dic))
         if n in self.dic:
             for nei in self.dic[n]:
                 if nei not in visited:
