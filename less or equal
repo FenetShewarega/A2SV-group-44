@@ -1,0 +1,26 @@
+from  collections import defaultdict
+n , k = list(map(int , input().split()))
+num = list(map(int , input().split()))
+bool = True
+sol = []
+num.sort()
+if k == 0:
+    if num[0] >= 2:
+        print(1)
+    else:
+        print(-1) 
+elif k == n:
+    print(num[-1])
+else:
+  
+
+ 
+    for i in range(k):
+        sol.append(num[i])
+
+    if sol[-1] == num[k]:
+        print(-1)
+    else:
+        print(sol[-1])
+            
+
